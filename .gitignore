@@ -9,7 +9,8 @@
 /coverage
 
 # production
-/build
+# deploying using netlify, need build folder in github
+# /build
 
 # misc
 .DS_Store
