@@ -11,6 +11,8 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>I just did.</p>
+        <h3>I'm testing this to see if my code works! </h3>
+        <code>let netlifyDeploy = "awesome"</code>
         <a
           className="App-link"
           href="https://reactjs.org"
