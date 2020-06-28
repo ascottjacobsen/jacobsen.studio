@@ -1,29 +1,16 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Component } from "react";
+import Headline from "./components/Headline";
+import Avatar from "./components/Avatar";
+import HeadlineBox from "./components/HeadlineBox";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>I just did.</p>
-        <h3>I'm testing this to see if my code works! </h3>
-        <code>let netlifyDeploy = "awesome"</code>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <>
+        <HeadlineBox />
+      </>
+    );
+  }
 }
 
 export default App;
