@@ -1,3 +1,28 @@
 .headline_box {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 0.9fr;
+  grid-template-rows: auto;
+  gap: 35px 1px;
+  grid-template-areas: "avatar avatar ." "headline headline headline" "headline-text headline-text headline-text" "down-arrow down-arrow down-arrow";
+}
+
+.avatar {
+  grid-area: avatar;
+}
+
+.headline {
+  grid-area: headline;
+  font-size: 40px;
+  margin: 0;
+}
+
+.headline_text {
+  grid-area: headline-text;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.down_arrow {
+  grid-area: down-arrow;
+  justify-self: center;
 }
