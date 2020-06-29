@@ -4,6 +4,7 @@ import Headline from "./Headline";
 import styles from "./HeadlineBox.module.css";
 import HeadlineText from "./HeadlineText";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import { ButtonBase } from "@material-ui/core";
 
 const HeadlineBox = () => {
   return (
@@ -17,7 +18,9 @@ const HeadlineBox = () => {
         text="My name is Alex, and I’m a web developer based in Austin, TX. Here you’ll find some of the things I’ve been working on."
         headlineTextClass={styles.headline_text}
       />
-      <KeyboardArrowDownIcon className={styles.down_arrow} />
+      <ButtonBase className={styles.down_arrow}>
+        <KeyboardArrowDownIcon fontSize="large" />
+      </ButtonBase>
     </div>
   );
 };
