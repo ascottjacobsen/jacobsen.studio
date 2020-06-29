@@ -27,12 +27,9 @@ class ServeOpContainer extends Component {
       searchOn,
     } = this.props;
 
-    opportunities.map(each => {
-      console.log(each.location.length);
-    });
     let filteredOpportunities = [];
     if (this.state.searchValue.length > 0) {
-      filteredOpportunities = opportunities.filter(eachItem => {
+      filteredOpportunities = opportunities.filter((eachItem) => {
         return (
           eachItem.country[0]
             .toLowerCase()
@@ -70,7 +67,7 @@ class ServeOpContainer extends Component {
               <input
                 type="text"
                 placeholder="enter your search query"
-                onChange={e => this.handleSearch(e)}
+                onChange={(e) => this.handleSearch(e)}
               ></input>
             ) : (
               <h2 className="serveOp serveOp-container-title">
