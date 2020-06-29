@@ -8,19 +8,21 @@ import { ButtonBase } from "@material-ui/core";
 
 const HeadlineBox = () => {
   return (
-    <div className={styles.headline_box}>
-      <Avatar
-        imageSource="/images/alex-avatar.jpg"
-        altText="Alex's avatar image"
-      />
-      <Headline text="Hello!" headlineClass={styles.headline} />
-      <HeadlineText
-        text="My name is Alex, and I’m a web developer based in Austin, TX. Here you’ll find some of the things I’ve been working on."
-        headlineTextClass={styles.headline_text}
-      />
-      <ButtonBase className={styles.down_arrow}>
-        <KeyboardArrowDownIcon fontSize="large" />
-      </ButtonBase>
+    <div className={styles.headline_container}>
+      <div className={styles.headline_box}>
+        <Avatar
+          imageSource="/images/alex-avatar.jpg"
+          altText="Alex's avatar image"
+        />
+        <Headline text="Hello!" headlineClass={styles.headline} />
+        <HeadlineText
+          text="My name is Alex, and I’m a web developer based in Austin, TX. Here you’ll find some of the things I’ve been working on."
+          headlineTextClass={styles.headline_text}
+        />
+        <ButtonBase className={styles.down_arrow}>
+          <KeyboardArrowDownIcon fontSize="large" />
+        </ButtonBase>
+      </div>
     </div>
   );
 };

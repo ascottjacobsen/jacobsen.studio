@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,700&display=swap");
+
+:root {
+  --gem-green: #86aa49;
+  --gem-green-hover: #386c2f;
+  --gem-grey: #676767;
+  --grow-params: grow 0.5s ease-out forwards;
+}
+
+.serveOp {
+  font-family: Montserrat, sans-serif;
+}
+
+.serveOp h2 {
+  font-weight: 700;
+}
+
+.serveOp h3 {
+  font-size: 1.375rem;
+}
+.serveOp h4 {
+  font-size: 1.125rem;
+}
+
+.serveOp p {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 30px;
+}
+
+.map-and-sphere-grid path {
+  opacity: 0.15;
+}
+
+/* show countries, regions & spheres with opportunities */
+.map-and-sphere-grid .has-opportunities,
+.map-and-sphere-grid .has-opportunities path {
+  cursor: pointer;
+  opacity: 1;
+
+  transition: fill 0.15s ease-in;
+}
+
+.serveOp-map .has-opportunities {
+  fill: var(--gem-green);
+}
+
+.map-and-sphere-grid .serveOp.serveOp-map .has-opportunities:hover,
+.map-and-sphere-grid .serveOp.serveOp-map .has-opportunities:hover path {
+  fill: var(--gem-green-hover);
+}
+
+.map-and-sphere-grid .serveOp-spheres .has-opportunities,
+.map-and-sphere-grid .serveOp-spheres .has-opportunities path {
+  transition: opacity 0.15s ease-in;
+}
+
+.map-and-sphere-grid .serveOp-spheres .has-opportunities:hover,
+.map-and-sphere-grid .serveOp-spheres .has-opportunities:hover path {
+  opacity: 0.5;
+}
+
+/* Change success button to GEM green */
+.btn-success {
+  background-color: var(--gem-green);
+  border-color: var(--gem-green);
+}
+
+.btn-success:hover {
+  background-color: var(--gem-green-hover);
+  border-color: var(--gem-green-hover);
+}
+
+/* Utility classes */
+.hide {
+  display: none;
+}
+
+/* Animations */
+@-webkit-keyframes slide-from-right {
+  0% {
+    left: 1500px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes slide-from-right {
+  0% {
+    left: 1500px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes serveOp-hide {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+.animated-graphic {
+  -webkit-animation: slide-from-right 0.5s cubic-bezier(0.25, 0.1, 0.01, 1)
+    forwards;
+  animation: slide-from-right 0.5s cubic-bezier(0.25, 0.1, 0.01, 1) forwards;
+}
+
+.App {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Serve Op Container and Map */
+/* .serveOp-app-flex {
+  width: 100vw;
+  height: calc(100vh - 55px);
+  display: flex;
+  flex-direction: column-reverse;
+} */
+
+/* @media screen and (min-width: 768px) {
+  .serveOp-app-flex {
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: space-between;
+    height: calc(100vh - 77px);
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    position: relative;
+  }
+} */
+
+.where-to-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 80vh;
+  padding: 20px;
+  z-index: 50;
+  color: #fff;
+  background: #434343bf;
+  border-radius: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .where-to-container {
+    max-width: 620px;
+  }
+}
+
+.where-to-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1060px) {
+  .where-to-container h2 {
+    font-size: 4rem;
+  }
+}
+
+.where-to-container p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.nav-tray {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 55px;
+  bottom: 0;
+  z-index: 10;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px -2px 30px -20px rgba(0, 0, 0, 1);
+}
+
+.nav-tray button:focus {
+  box-shadow: none;
+}
+
+.nav-tray svg {
+  fill: var(--gem-grey);
+}
+
+.nav-tray .active svg {
+  fill: var(--gem-green);
+}
+
+@media screen and (min-width: 768px) {
+  .nav-tray {
+    position: initial;
+    width: 77px;
+    height: calc(100vh - 77px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-tray svg {
+    margin-bottom: 30px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.map-and-sphere-grid {
+  flex-grow: 1;
+  overflow: scroll;
+  display: flex;
+  box-sizing: initial;
+}
+
+/* ServeOp Map */
+
+.serveOp-map-container {
+  width: 870px;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .serveOp-map-container {
+    display: grid;
+    align-content: end;
+    justify-items: flex-start;
+  }
+}
+@media screen and (min-width: 900px) {
+  .serveOp-map-container {
+    justify-items: flex-end;
+  }
+}
+
+.serveOp.serveOp-map {
+  height: 100%;
+  -ms-touch-action: pan-x pan-y pinch-zoom;
+  touch-action: pan-x pan-y pinch-zoom;
+  position: relative;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+/* ServeOp Spheres */
+.serveOp-spheres {
+  width: 100%;
+  position: relative;
+}
+
+/* ServeOp Grid */
+.serveOp.serveOp-container {
+  justify-self: center;
+  align-self: center;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 80px auto;
+  padding: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: var(--gem-grey);
+  color: white;
+  transition: opacity 0.15s ease-in;
+  animation: var(--grow-params);
+  transform-origin: bottom right;
+}
+
+.serveOp-container-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: var(--gem-grey);
+  z-index: 10;
+  -webkit-box-shadow: 0px 11px 25px -2px var(--gem-grey);
+  -moz-box-shadow: 0px 11px 25px -2px var(--gem-grey);
+  box-shadow: 0px 11px 25px -2px var(--gem-grey);
+}
+
+.serveOp.serveOp-close-container-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+button.serveOp.serveOp-close-button {
+  background: none;
+  border: none;
+  color: #fff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
+}
+
+button.serveOp.serveOp-close-button:hover,
+button.serveOp.serveOp-close-button:active,
+button.serveOp.serveOp-close-button:focus {
+  color: var(--gem-green);
+  outline: none;
+  transform: scale(1.25);
+}
+
+.serveOp .serveOp-title-row input {
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #fff;
+  width: 60%;
+  color: white;
+}
+
+.serveOp .serveOp-title-row input::placeholder {
+  color: #aaa;
+}
+
+.serveOp .serveOp-title-row input:focus {
+  outline: none;
+}
+
+.serveOp.serveOp-container-title {
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.serveOp-card-grid-container {
+  overflow: scroll;
+  padding: 10px 15px;
+}
+
+.serveOp.serveOp-card-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 60px;
+  grid-row-gap: 60px;
+}
+
+.serveOp .serveOp-card {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 200px 100px 50px auto 80px;
+}
+
+.serveOp-card h3 {
+  margin-top: 10px;
+}
+
+.serveOp-card button {
+  width: 50%;
+  justify-self: center;
+  margin: 15px auto;
+}
+
+.opp-hero {
+  overflow: hidden;
+}
+
+.opp-hero img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.serveOp.serveOp-hide {
+  opacity: 0;
+}
+
+.serveOp-hide {
+  animation: serveOp-hide 0.5s cubic-bezier(0.25, 0.1, 0.01, 1) forwards;
+}
+
+.loader-container {
+  justify-self: center;
+}
+
+.serveOp.serveOp-no-results {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+.serveOp-card-grid-buffer {
+  width: 100%;
+  height: 100px;
+}
+
+.serveOp-card-grid-footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  height: 80px;
+  width: 100%;
+  background-color: var(--gem-grey);
+  z-index: 10;
+  -webkit-box-shadow: 0px 11px 25px 45px var(--gem-grey);
+  -moz-box-shadow: 0px 11px 25px 45px var(--gem-grey);
+  box-shadow: 0px 11px 25px 45px var(--gem-grey);
+}
+
+.where-to-container a {
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.25s ease-in-out;
+}
+
+.where-to-container a:hover {
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0px 2px #fff;
+}

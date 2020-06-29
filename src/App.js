@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import Headline from "./components/Headline";
-import Avatar from "./components/Avatar";
 import HeadlineBox from "./components/HeadlineBox";
 import Layout from "./components/Layout";
+import ServeApp from "./gem-serve-page/components/ServeApp";
 
 class App extends Component {
   render() {
@@ -10,6 +9,10 @@ class App extends Component {
       <>
         <Layout>
           <HeadlineBox />
+
+          <div className="app-container">
+            <ServeApp></ServeApp>
+          </div>
         </Layout>
       </>
     );
