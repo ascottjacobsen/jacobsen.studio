@@ -19,7 +19,7 @@ class App extends Component {
     this.state = {
       servingOpportunities: [],
       loadOpportunities: false,
-      loadWhereTo: true,
+      loadWhereTo: false,
       loadOpportunitiesCountriesOrSpheres: `countries`,
       focusCitiesVisible: false,
       countriesWithOpportunities: {

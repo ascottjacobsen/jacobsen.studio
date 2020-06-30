@@ -20,6 +20,10 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
+p {
+  line-height: 1.7;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
