@@ -13,8 +13,9 @@ import "../css/Sphere.css";
 import RegionProxy from "./RegionProxy";
 
 const override = css`
-  display: block;
+  display: inline-block;
   justify-content: center;
+  margin: 0 auto;
 `;
 
 class MapAndSphereGrid extends Component {
@@ -31,8 +32,11 @@ class MapAndSphereGrid extends Component {
       spheresWithOpportunities,
       getOpportunities,
     } = this.props;
+
+    const loadApp = true && countriesWithOpportunities.length > 0;
+
     if (loadOpportunitiesCountriesOrSpheres === `countries`) {
-      if (countriesWithOpportunities.length > 0) {
+      if (loadApp) {
         return (
           <div className="map-and-sphere-grid">
             <div className="serveOp-map-container">
@@ -49,15 +53,13 @@ class MapAndSphereGrid extends Component {
       } else {
         return (
           <div className="map-and-sphere-grid">
-            <div className="loader-container">
-              <PulseLoader
-                css={override}
-                size={15}
-                //size={"150px"} this also works
-                color={"#86aa49"}
-                loading={true}
-              />
-            </div>
+            <PulseLoader
+              css={override}
+              size={15}
+              //size={"150px"} this also works
+              color={"#86aa49"}
+              loading={true}
+            />
           </div>
         );
       }

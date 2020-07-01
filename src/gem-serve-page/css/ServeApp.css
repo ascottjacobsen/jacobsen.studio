@@ -247,9 +247,11 @@
 .map-and-sphere-grid {
   /* flex-grow: 1; */
   overflow: scroll;
-  /* display: flex; */
+  display: flex;
   box-sizing: initial;
   height: 450px;
+  align-items: center;
+  justify-items: center;
 }
 
 /* ServeOp Map */
