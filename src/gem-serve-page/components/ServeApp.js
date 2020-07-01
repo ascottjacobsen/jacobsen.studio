@@ -126,10 +126,11 @@ class App extends Component {
       search: boolean,
     });
 
-  switchToSpheresOrCountries = (e) => {
+  // Pass a string to this function to set state.
+  switchToSpheresOrCountries = (oppType) => {
     this.searchOn(false);
-    if (e.target.value !== this.state.loadOpportunitiesCountriesOrSpheres) {
-      this.setState({ loadOpportunitiesCountriesOrSpheres: e.target.value });
+    if (oppType !== this.state.loadOpportunitiesCountriesOrSpheres) {
+      this.setState({ loadOpportunitiesCountriesOrSpheres: oppType });
     }
   };
 

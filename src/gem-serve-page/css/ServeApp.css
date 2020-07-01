@@ -245,16 +245,18 @@
 }
 
 .map-and-sphere-grid {
-  flex-grow: 1;
+  /* flex-grow: 1; */
   overflow: scroll;
-  display: flex;
+  /* display: flex; */
   box-sizing: initial;
+  height: 450px;
 }
 
 /* ServeOp Map */
 
 .serveOp-map-container {
-  width: 870px;
+  width: 100vw;
+  height: 100%;
   margin-left: auto;
 }
 
@@ -272,13 +274,11 @@
 }
 
 .serveOp.serveOp-map {
-  height: 100%;
-  -ms-touch-action: pan-x pan-y pinch-zoom;
+  height: 500px;
   touch-action: pan-x pan-y pinch-zoom;
   position: relative;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  margin: -7px;
 }
 
 /* ServeOp Spheres */

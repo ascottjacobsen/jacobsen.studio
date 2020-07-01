@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FaGlobeEurope, FaCity, FaSearch, FaDotCircle } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import { Button } from "@material-ui/core";
 
 class NavTray extends Component {
   render() {
@@ -15,21 +16,21 @@ class NavTray extends Component {
 
     return (
       <div className="nav-tray">
-        <button
+        <Button
           className={`btn ${
             loadOpportunitiesCountriesOrSpheres === "countries" && !search
               ? "active"
               : ""
           }`}
           value="countries"
-          onClick={switchToSpheresOrCountries}
+          onClick={(e) => switchToSpheresOrCountries("countries")}
         >
           <IconContext.Provider
             value={{ size: "1.5em", attr: { pointerEvents: "none" } }}
           >
             <FaGlobeEurope />
           </IconContext.Provider>
-        </button>
+        </Button>
         <button
           className={`btn${
             loadOpportunitiesCountriesOrSpheres === "spheres" && !search
@@ -37,7 +38,7 @@ class NavTray extends Component {
               : ""
           }`}
           value="spheres"
-          onClick={switchToSpheresOrCountries}
+          onClick={(e) => switchToSpheresOrCountries("spheres")}
         >
           {" "}
           <IconContext.Provider
