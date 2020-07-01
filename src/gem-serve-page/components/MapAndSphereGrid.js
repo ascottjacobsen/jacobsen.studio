@@ -7,7 +7,7 @@ import { css } from "@emotion/core";
 import { PulseLoader } from "react-spinners";
 import { handleMapOrSphereClick } from "./functions";
 
-import "../css/App.css";
+// import "../css/App.css";
 import "../css/Map.css";
 import "../css/Sphere.css";
 import RegionProxy from "./RegionProxy";

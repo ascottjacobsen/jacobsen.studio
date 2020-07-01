@@ -1,6 +1,7 @@
 .headline_container {
   height: 100vh;
   display: flex;
+  justify-content: center;
 }
 
 .headline_box {

@@ -1,0 +1,23 @@
+.section_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 2.5fr;
+  gap: 1px 1px;
+  grid-template-areas: "section_header" "section_content";
+}
+
+.section_header {
+  grid-area: section_header;
+  max-width: 500px;
+  margin: 0 25px;
+  align-self: center;
+  justify-self: center;
+}
+
+.section_content {
+  grid-area: section_content;
+}
+
+.app_container {
+  height: 500px;
+}

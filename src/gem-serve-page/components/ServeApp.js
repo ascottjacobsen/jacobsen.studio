@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../css/App.css";
+import "../css/ServeApp.css";
 
 import ServeOpContainer from "./ServeOpContainer";
 import WheretoContainer from "./WhereToContainer";
@@ -19,7 +19,7 @@ class App extends Component {
     this.state = {
       servingOpportunities: [],
       loadOpportunities: false,
-      loadWhereTo: true,
+      loadWhereTo: false,
       loadOpportunitiesCountriesOrSpheres: `countries`,
       focusCitiesVisible: false,
       countriesWithOpportunities: {
@@ -174,16 +174,6 @@ class App extends Component {
     if (this.state.loadOpportunities) {
       return (
         <div className="serveOp-app-flex">
-          <NavTray
-            switchToSpheresOrCountries={this.switchToSpheresOrCountries}
-            loadOpportunitiesCountriesOrSpheres={
-              this.state.loadOpportunitiesCountriesOrSpheres
-            }
-            focusCitiesVisible={this.state.focusCitiesVisible}
-            showFocusCities={this.showFocusCities}
-            search={this.state.search}
-            searchOn={this.searchOn}
-          />
           <ServeOpContainer
             search={this.state.search}
             opportunities={
@@ -197,6 +187,16 @@ class App extends Component {
             searchOn={this.searchOn}
             transform={"transform-origin: 50px 50px;"}
           />
+          <NavTray
+            switchToSpheresOrCountries={this.switchToSpheresOrCountries}
+            loadOpportunitiesCountriesOrSpheres={
+              this.state.loadOpportunitiesCountriesOrSpheres
+            }
+            focusCitiesVisible={this.state.focusCitiesVisible}
+            showFocusCities={this.showFocusCities}
+            search={this.state.search}
+            searchOn={this.searchOn}
+          />
         </div>
       );
     } else {
@@ -209,15 +209,6 @@ class App extends Component {
             />
           )}
 
-          <NavTray
-            switchToSpheresOrCountries={this.switchToSpheresOrCountries}
-            loadOpportunitiesCountriesOrSpheres={
-              this.state.loadOpportunitiesCountriesOrSpheres
-            }
-            focusCitiesVisible={this.state.focusCitiesVisible}
-            showFocusCities={this.showFocusCities}
-            searchOn={this.searchOn}
-          />
           <MapAndSphereGrid
             loadOpportunitiesCountriesOrSpheres={
               this.state.loadOpportunitiesCountriesOrSpheres
@@ -231,6 +222,15 @@ class App extends Component {
             }
             spheresWithOpportunities={this.state.spheresWithOpportunities}
             getOpportunities={this.getOpportunities}
+          />
+          <NavTray
+            switchToSpheresOrCountries={this.switchToSpheresOrCountries}
+            loadOpportunitiesCountriesOrSpheres={
+              this.state.loadOpportunitiesCountriesOrSpheres
+            }
+            focusCitiesVisible={this.state.focusCitiesVisible}
+            showFocusCities={this.showFocusCities}
+            searchOn={this.searchOn}
           />
         </div>
       );

@@ -1,0 +1,60 @@
+/* .map_and_sphere_grid path {
+  opacity: 0.15;
+} */
+
+.map_and_sphere_grid {
+  height: 600px;
+  overflow: scroll;
+  display: flex;
+  box-sizing: initial;
+}
+
+/* ServeOp Map */
+.serveOp-map-container {
+  width: 100vw;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .serveOp-map-container {
+    display: grid;
+    align-content: end;
+    justify-items: flex-start;
+  }
+}
+@media screen and (min-width: 900px) {
+  .serveOp-map-container {
+    justify-items: flex-end;
+  }
+}
+
+.loader_container {
+  justify-self: center;
+}
+
+/* show countries, regions & spheres with opportunities */
+.map_and_sphere_grid .has_opportunities,
+.map_and_sphere_grid .has_opportunities path {
+  cursor: pointer;
+  opacity: 1;
+  transition: fill 0.15s ease-in;
+}
+
+.serveOp-map .has_opportunities {
+  fill: var(--gem-green);
+}
+
+.map_and_sphere_grid .serveOp.serveOp-map .has_opportunities:hover,
+.map_and_sphere_grid .serveOp.serveOp-map .has_opportunities:hover path {
+  fill: var(--gem-green-hover);
+}
+
+.map_and_sphere_grid .serveOp-spheres .has_opportunities,
+.map_and_sphere_grid .serveOp-spheres .has_opportunities path {
+  transition: opacity 0.15s ease-in;
+}
+
+.map_and_sphere_grid .serveOp-spheres .has_opportunities:hover,
+.map_and_sphere_grid .serveOp-spheres .has_opportunities:hover path {
+  opacity: 0.5;
+}
