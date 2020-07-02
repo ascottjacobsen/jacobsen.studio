@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import styles from "./ServeOpContainer.Module.css";
+import styles from "./ServeOpContainer.module.css";
 import ContainerCloser from "./ContainerCloser";
 import ServeOpCardGrid from "./ServeOpCardGrid";
+console.log(`styles: ${styles.what}`);
 
 class ServeOpContainer extends Component {
   constructor() {
@@ -19,7 +20,7 @@ class ServeOpContainer extends Component {
   }
 
   componentDidMount() {
-    console.log(styles.what);
+    console.log(`styles: ${styles.what}`);
   }
 
   render() {
@@ -56,7 +57,7 @@ class ServeOpContainer extends Component {
     }
 
     return (
-      <div id="serve-op-container" className="serveOp serveOp-container">
+      <div id="serve-op-container" className={styles.serve_op_container}>
         <div className="serveOp serveOp-container-header">
           <ContainerCloser
             closeFunctions={() => {

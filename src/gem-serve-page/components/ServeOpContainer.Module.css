@@ -1,7 +1,8 @@
-.serve_op_title {
-  color: pink;
-}
-
 .what {
   background: red;
+}
+
+.serve_op_container {
+  margin: 0 25px;
+  background-color: pink;
 }
