@@ -35,13 +35,13 @@ class RegionProxy extends Component {
   };
   render() {
     let countryAndRegionArray = [];
-    this.props.countriesWithOpportunities.map(country => {
-      countryAndRegionArray.push({ name: country, byRegion: false });
-    });
-    this.props.regionsWithOpportunities.map(region => {
-      countryAndRegionArray.push({ name: region, byRegion: true });
-    });
-    return countryAndRegionArray.map(area => (
+    this.props.countriesWithOpportunities.map((country) =>
+      countryAndRegionArray.push({ name: country, byRegion: false })
+    );
+    this.props.regionsWithOpportunities.map((region) =>
+      countryAndRegionArray.push({ name: region, byRegion: true })
+    );
+    return countryAndRegionArray.map((area) => (
       <div key={`${area.name}-title-container`}>
         {this.state.hoverTitle ? (
           <CountryTitle
@@ -57,10 +57,10 @@ class RegionProxy extends Component {
           class="has-opportunities"
           stroke="#fff"
           //   fill="#4d4d4d"
-          onclick={e =>
+          onclick={(e) =>
             this.props.handleMapClick(e, area.byRegion ? "region" : "country")
           }
-          onMouseEnter={e => this.showHoverTitle(e, area.name)}
+          onMouseEnter={(e) => this.showHoverTitle(e, area.name)}
           onMouseLeave={() => this.clearHoverTitle()}
         ></SvgProxy>
       </div>

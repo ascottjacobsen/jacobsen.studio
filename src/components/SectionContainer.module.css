@@ -10,6 +10,7 @@
   grid-area: section_header;
   max-width: 500px;
   margin: 0 25px;
+  padding: 10px 0 20px 0;
   align-self: center;
   justify-self: center;
 }
@@ -19,5 +20,5 @@
 }
 
 .app_container {
-  height: 500px;
+  height: 460px;
 }

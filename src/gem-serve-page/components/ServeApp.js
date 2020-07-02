@@ -63,7 +63,7 @@ class App extends Component {
             return (
               title.rendered.length > 0 &&
               full_title.length > 0 &&
-              featured_media != 0 &&
+              featured_media !== 0 &&
               country.length > 0 &&
               location.length > 0 &&
               sphere.length > 0 &&
@@ -114,7 +114,9 @@ class App extends Component {
     let spheres = [];
     data.map((item) => {
       if (!spheres.includes(item.sphere[0]) && item.sphere[0] !== undefined) {
-        spheres.push(item.sphere[0]);
+        return spheres.push(item.sphere[0]);
+      } else {
+        return null;
       }
     });
     return spheres;

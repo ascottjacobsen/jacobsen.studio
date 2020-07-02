@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { FaGlobeEurope, FaCity, FaSearch, FaDotCircle } from "react-icons/fa";
+import { FaGlobeEurope, FaSearch, FaDotCircle } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { Button } from "@material-ui/core";
 import NavButton from "./NavButton";
 
 class NavTray extends Component {
@@ -9,8 +8,6 @@ class NavTray extends Component {
     const {
       switchToSpheresOrCountries,
       loadOpportunitiesCountriesOrSpheres,
-      focusCitiesVisible,
-      showFocusCities,
       search,
       searchOn,
     } = this.props;

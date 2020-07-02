@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import styles from "./ServeOpContainer.Module.css";
 import ContainerCloser from "./ContainerCloser";
-
 import ServeOpCardGrid from "./ServeOpCardGrid";
 
 class ServeOpContainer extends Component {
@@ -13,11 +13,15 @@ class ServeOpContainer extends Component {
   }
 
   handleSearch(e) {
-    console.log(this.state.searchValue);
     this.setState({
       searchValue: e.target.value,
     });
   }
+
+  componentDidMount() {
+    console.log(styles.what);
+  }
+
   render() {
     const {
       search,
@@ -27,12 +31,9 @@ class ServeOpContainer extends Component {
       searchOn,
     } = this.props;
 
-    opportunities.map(each => {
-      console.log(each.location.length);
-    });
     let filteredOpportunities = [];
     if (this.state.searchValue.length > 0) {
-      filteredOpportunities = opportunities.filter(eachItem => {
+      filteredOpportunities = opportunities.filter((eachItem) => {
         return (
           eachItem.country[0]
             .toLowerCase()
@@ -70,10 +71,10 @@ class ServeOpContainer extends Component {
               <input
                 type="text"
                 placeholder="enter your search query"
-                onChange={e => this.handleSearch(e)}
+                onChange={(e) => this.handleSearch(e)}
               ></input>
             ) : (
-              <h2 className="serveOp serveOp-container-title">
+              <h2 className={styles.serve_op_title}>
                 {title
                   .replace(/sports-music-art/g, "Sports, Music & Art")
                   .replace(/gem-uk/g, "GEM UK")
