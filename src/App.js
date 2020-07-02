@@ -12,19 +12,10 @@ class App extends Component {
           <HeadlineBox />
           <SectionContainer
             sectionTitle="GEM Serving Page"
-            sectionDescription="I built this application for Greater Europe Mission UK to make it easier to find mission opportunities across Europe. It consists first of an SVG map which I modified to reduce file size, and an application built with React.js
-
-
-
-
-
-"
+            sectionDescription="I built this application for Greater Europe Mission UK to make it easier to find mission opportunities across Europe. It consists first of an SVG map which I modified to reduce file size, and an application built with React.js"
           >
-            {" "}
-            <ServeApp></ServeApp>
+            <ServeApp />
           </SectionContainer>
-
-          <div className="app-container"></div>
         </Layout>
       </>
     );
