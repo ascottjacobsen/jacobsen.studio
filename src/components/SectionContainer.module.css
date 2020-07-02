@@ -6,6 +6,7 @@
   grid-template-areas: "section_header" "section_content";
 }
 
+/* move these styles to app container: */
 .section_header_wrapper {
   width: 100vw;
   box-shadow: 0px 26px 44px -61px rgba(0, 0, 0, 1);
