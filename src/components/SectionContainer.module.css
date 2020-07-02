@@ -6,10 +6,8 @@
   grid-template-areas: "section_header" "section_content";
 }
 
-/* move these styles to app container: */
 .section_header_wrapper {
   width: 100vw;
-  box-shadow: 0px 26px 44px -61px rgba(0, 0, 0, 1);
   margin-bottom: 30px;
 }
 
@@ -28,4 +26,6 @@
 
 .app_container {
   height: 460px;
+  box-shadow: inset 3px 5px 50px -24px rgba(0, 0, 0, 0.44);
+  overflow: scroll;
 }

@@ -390,11 +390,11 @@ button.serveOp.serveOp-close-button:focus {
   margin-top: 10px;
 }
 
-.serveOp-card button {
+/* .serveOp-card button {
   width: 50%;
   justify-self: center;
   margin: 15px auto;
-}
+} */
 
 .opp-hero {
   overflow: hidden;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styles from "./ServeOpContainer.module.css";
 import ContainerCloser from "./ContainerCloser";
 import ServeOpCardGrid from "./ServeOpCardGrid";
-console.log(`styles: ${styles.what}`);
+console.log(`styles: ${styles.serveOp_card_grid_container}`);
 
 class ServeOpContainer extends Component {
   constructor() {
@@ -84,7 +84,7 @@ class ServeOpContainer extends Component {
             )}
           </div>
         </div>
-        <div className="serveOp serveOp-card-grid-container">
+        <div className={styles.serveOp_card_grid_container}>
           <ServeOpCardGrid
             opportunities={search ? filteredOpportunities : opportunities}
           />

@@ -1,7 +1,5 @@
-.serve_op_container {
-  margin: 0 25px;
-}
-
 .serveOp_card_grid_container {
   overflow: scroll;
+  padding: 10px 15px;
+  background: pink;
 }
