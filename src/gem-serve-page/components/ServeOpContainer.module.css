@@ -2,6 +2,10 @@
   margin: 0 25px;
 }
 
+.serveOp_container_header {
+  top: 0;
+}
+
 .serveOp_card_grid_container {
   overflow: scroll;
 }

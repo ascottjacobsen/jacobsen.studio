@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styles from "./ServeOpContainer.module.css";
 import ContainerCloser from "./ContainerCloser";
 import ServeOpCardGrid from "./ServeOpCardGrid";
-console.log(`styles: ${styles.serveOp_card_grid_container}`);
 
 class ServeOpContainer extends Component {
   constructor() {
@@ -58,7 +57,7 @@ class ServeOpContainer extends Component {
 
     return (
       <div id="serve-op-container" className={styles.serve_op_container}>
-        <div className="serveOp serveOp-container-header">
+        <div className={styles.serveOp_container_header}>
           <ContainerCloser
             closeFunctions={() => {
               searchOn(false);
