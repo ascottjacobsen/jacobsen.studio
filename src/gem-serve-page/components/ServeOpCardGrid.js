@@ -13,6 +13,10 @@ const useStyles = makeStyles({
     color: (props) => props.color,
   },
 
+  addCardMargin: {
+    margin: "0 25px",
+  },
+
   servOpCard: {
     overflow: "hidden",
     height: "100%",
@@ -63,7 +67,7 @@ const ServeOpCardGrid = ({ opportunities }) => {
   return opportunities.length > 0 ? (
     <div className="serveOp serveOp-card-grid">
       {opportunities.map((item) => (
-        <Fade bottom key={item.id}>
+        <Fade bottom key={item.id} className={classes.addCardMargin}>
           <Card className={classes.servOpCard} elevation={10}>
             <ButtonBase className={classes.heroButton}>
               <img
