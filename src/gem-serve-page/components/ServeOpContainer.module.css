@@ -1,11 +1,13 @@
 .serve_op_container {
-  margin: 0 25px;
+  margin: 0;
 }
 
 .serveOp_container_header {
   top: 0;
+  margin: 10px;
 }
 
 .serveOp_card_grid_container {
   overflow: scroll;
+  padding: 15px;
 }

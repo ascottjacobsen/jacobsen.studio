@@ -2,7 +2,6 @@ import React from "react";
 import { ButtonBase } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import { makeStyles } from "@material-ui/core/styles";
-import { pink } from "@material-ui/core/colors";
 
 const useStyles = makeStyles({
   closeRow: {
