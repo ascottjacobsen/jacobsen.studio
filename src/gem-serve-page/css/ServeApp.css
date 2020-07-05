@@ -364,7 +364,8 @@ button.serveOp.serveOp-close-button:focus {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-column-gap: 60px;
-  grid-row-gap: 60px;
+  grid-row-gap: 30px;
+  justify-items: center;
 }
 
 .serveOp .serveOp-card {

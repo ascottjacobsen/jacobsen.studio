@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   servOpCard: {
     overflow: "hidden",
     height: "100%",
-    width: "100%",
+    width: "345px",
     display: "grid",
     gridTemplateRows: "200px auto 100px",
     borderRadius: 15,
@@ -88,7 +88,7 @@ const ServeOpCardGrid = ({ opportunities }) => {
               <h3 className={classes.serveOpTitle}>{item.full_title}</h3>
 
               <h4 className={classes.serveOpSubTitle}>
-                {item.location} | {item.time}
+                {item.location} &#8226; {item.time}
               </h4>
               <p className="fade-in">{item.description}</p>
             </div>
