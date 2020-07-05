@@ -47,7 +47,11 @@ const useStyles = makeStyles({
   },
 
   serveOpTitle: {
-    margin: "5 0",
+    margin: "5px 0",
+  },
+
+  serveOpSubTitle: {
+    margin: 0,
   },
 
   actionButtonContainer: {
@@ -83,7 +87,7 @@ const ServeOpCardGrid = ({ opportunities }) => {
             <div className={classes.cardContent}>
               <h3 className={classes.serveOpTitle}>{item.full_title}</h3>
 
-              <h4 className="fade-in">
+              <h4 className={classes.serveOpSubTitle}>
                 {item.location} | {item.time}
               </h4>
               <p className="fade-in">{item.description}</p>
