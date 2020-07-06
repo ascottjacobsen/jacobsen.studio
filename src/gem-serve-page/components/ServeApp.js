@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import "../css/ServeApp.css";
 
-import ServeOpContainer from "./ServeOpContainer";
 import WheretoContainer from "./WhereToContainer";
-import MapAndSphereGrid from "./MapAndSphereGrid";
 import NavTray from "./NavTray";
+import AppWindow from "./AppWindow";
 
 /* Quick Config */
 //Set number of API reults
@@ -174,71 +173,54 @@ class App extends Component {
   };
 
   render() {
-    if (this.state.loadOpportunities) {
-      return (
-        <div className="serveOp-app-flex">
-          <ServeOpContainer
-            search={this.state.search}
-            opportunities={
-              this.state.search
-                ? this.state.servingOpportunities
-                : this.state.currentOpportunityList
-            }
-            loadBySpheres={this.state.loadOpportunitiesCountriesOrSpheres}
-            title={this.state.currentOpportunity}
-            closeServeOpContainer={this.closeServeOpContainer}
-            searchOn={this.searchOn}
-            transform={"transform-origin: 50px 50px;"}
+    return (
+      <div className="serveOp-app-flex">
+        {this.state.loadWhereTo && (
+          <WheretoContainer
+            closeFunctions={() => this.setState({ loadWhereTo: false })}
+            serveOpType={this.state.loadOpportunitiesCountriesOrSpheres}
           />
-          <NavTray
-            switchToSpheresOrCountries={this.switchToSpheresOrCountries}
-            loadOpportunitiesCountriesOrSpheres={
-              this.state.loadOpportunitiesCountriesOrSpheres
-            }
-            focusCitiesVisible={this.state.focusCitiesVisible}
-            showFocusCities={this.showFocusCities}
-            search={this.state.search}
-            searchOn={this.searchOn}
-          />
-        </div>
-      );
-    } else {
-      return (
-        <div className="serveOp-app-flex">
-          {this.state.loadWhereTo && (
-            <WheretoContainer
-              closeFunctions={() => this.setState({ loadWhereTo: false })}
-              serveOpType={this.state.loadOpportunitiesCountriesOrSpheres}
-            />
-          )}
+        )}
+        <AppWindow
+          loadOpportunities={this.state.loadOpportunities}
+          search={this.state.search}
+          opportunities={
+            this.state.search
+              ? this.state.servingOpportunities
+              : this.state.currentOpportunityList
+          }
+          loadBySpheres={this.state.loadOpportunitiesCountriesOrSpheres}
+          title={this.state.currentOpportunity}
+          closeServeOpContainer={this.closeServeOpContainer}
+          searchOn={this.searchOn}
+          transform={"transform-origin: 50px 50px;"}
+          loadOpportunitiesCountriesOrSpheres={
+            this.state.loadOpportunitiesCountriesOrSpheres
+          }
+          focusCitiesVisible={this.state.focusCitiesVisible}
+          countriesWithOpportunities={
+            this.state.countriesWithOpportunities.byCountry
+          }
+          regionsWithOpportunities={
+            this.state.countriesWithOpportunities.byRegion
+          }
+          spheresWithOpportunities={this.state.spheresWithOpportunities}
+          getOpportunities={this.getOpportunities}
+        />
 
-          <MapAndSphereGrid
-            loadOpportunitiesCountriesOrSpheres={
-              this.state.loadOpportunitiesCountriesOrSpheres
-            }
-            focusCitiesVisible={this.state.focusCitiesVisible}
-            countriesWithOpportunities={
-              this.state.countriesWithOpportunities.byCountry
-            }
-            regionsWithOpportunities={
-              this.state.countriesWithOpportunities.byRegion
-            }
-            spheresWithOpportunities={this.state.spheresWithOpportunities}
-            getOpportunities={this.getOpportunities}
-          />
-          <NavTray
-            switchToSpheresOrCountries={this.switchToSpheresOrCountries}
-            loadOpportunitiesCountriesOrSpheres={
-              this.state.loadOpportunitiesCountriesOrSpheres
-            }
-            focusCitiesVisible={this.state.focusCitiesVisible}
-            showFocusCities={this.showFocusCities}
-            searchOn={this.searchOn}
-          />
-        </div>
-      );
-    }
+        <NavTray
+          switchToSpheresOrCountries={this.switchToSpheresOrCountries}
+          loadOpportunitiesCountriesOrSpheres={
+            this.state.loadOpportunitiesCountriesOrSpheres
+          }
+          focusCitiesVisible={this.state.focusCitiesVisible}
+          showFocusCities={this.showFocusCities}
+          searchOn={this.searchOn}
+        />
+      </div>
+    );
   }
 }
+// }
 
 export default App;

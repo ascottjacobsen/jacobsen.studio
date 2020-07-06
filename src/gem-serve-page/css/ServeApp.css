@@ -130,13 +130,12 @@
 
 /* Serve Op Container and Map */
 .serveOp-app-flex {
-  width: 100vw;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .serveOp-app-flex {
     background-color: #fff;
     display: -webkit-box;
@@ -152,7 +151,7 @@
     align-items: stretch;
     position: relative;
   }
-}
+} */
 
 .where-to-container {
   position: absolute;
@@ -218,7 +217,7 @@
   fill: var(--gem-green);
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .nav-tray {
     position: initial;
     width: 77px;
@@ -228,7 +227,7 @@
     justify-content: flex-start;
     padding: 30px 20px;
   }
-}
+} */
 
 @media screen and (min-width: 768px) {
   .nav-tray svg {
