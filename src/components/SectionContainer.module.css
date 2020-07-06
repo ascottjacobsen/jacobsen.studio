@@ -8,7 +8,8 @@
 
 .section_header_wrapper {
   width: 100vw;
-  margin-bottom: 30px;
+  box-shadow: 0px 60px 121px -84px rgba(0, 0, 0, 0.35);
+  z-index: 100;
 }
 
 .section_header {
@@ -26,6 +27,5 @@
 
 .app_container {
   height: 460px;
-  box-shadow: inset 3px 5px 50px -24px rgba(0, 0, 0, 0.44);
   overflow: scroll;
 }

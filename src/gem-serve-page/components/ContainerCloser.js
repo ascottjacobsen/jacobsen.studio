@@ -5,10 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   closeRow: {
-    display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
-    padding: "10px 0",
+    margin: 0,
   },
   closeButton: {
     color: "#333333",

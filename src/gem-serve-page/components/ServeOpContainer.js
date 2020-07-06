@@ -58,14 +58,6 @@ class ServeOpContainer extends Component {
     return (
       <div id="serve-op-container" className={styles.serve_op_container}>
         <div className={styles.serveOp_container_header}>
-          <ContainerCloser
-            closeFunctions={() => {
-              searchOn(false);
-              closeServeOpContainer(
-                document.getElementById("serve-op-container")
-              );
-            }}
-          />
           <div className="serveOp serveOp-title-row">
             {search ? (
               <input
@@ -82,6 +74,14 @@ class ServeOpContainer extends Component {
               </h2>
             )}
           </div>
+          <ContainerCloser
+            closeFunctions={() => {
+              searchOn(false);
+              closeServeOpContainer(
+                document.getElementById("serve-op-container")
+              );
+            }}
+          />
         </div>
         <div className={styles.serveOp_card_grid_container}>
           <ServeOpCardGrid
