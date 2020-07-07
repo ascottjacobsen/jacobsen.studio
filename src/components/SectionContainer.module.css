@@ -1,24 +1,25 @@
 .section_container {
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 2.5fr;
   gap: 1px 1px;
   grid-template-areas: "section_header" "section_content";
+  justify-items: center;
 }
 
 .section_header_wrapper {
   width: 100vw;
   box-shadow: 0px 60px 121px -84px rgba(0, 0, 0, 0.35);
   z-index: 100;
+  display: flex;
+  justify-content: center;
 }
 
 .section_header {
   grid-area: section_header;
-  max-width: 700px;
   margin: 0 auto;
-  padding: 10px 25px 20px 25px;
-  align-self: center;
-  justify-self: center;
+  /* padding: 10px 25px 20px 25px; */
 }
 
 .section_content {
@@ -26,7 +27,6 @@
 }
 
 .app_container {
-  height: 460px;
   overflow: scroll;
-  max-width: 700px;
+  max-width: 730px;
 }

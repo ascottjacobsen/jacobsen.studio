@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styles from "./ServeOpContainer.module.css";
 import ContainerCloser from "./ContainerCloser";
 import ServeOpCardGrid from "./ServeOpCardGrid";
+import InnerWrap from "../../components/InnerWrap";
 
 class ServeOpContainer extends Component {
   constructor() {
@@ -57,31 +58,33 @@ class ServeOpContainer extends Component {
 
     return (
       <div id="serve-op-container" className={styles.serve_op_container}>
-        <div className={styles.serveOp_container_header}>
-          <div className="serveOp serveOp-title-row">
-            {search ? (
-              <input
-                type="text"
-                placeholder="enter your search query"
-                onChange={(e) => this.handleSearch(e)}
-              ></input>
-            ) : (
-              <h2 className={styles.serve_op_title}>
-                {title
-                  .replace(/sports-music-art/g, "Sports, Music & Art")
-                  .replace(/gem-uk/g, "GEM UK")
-                  .replace(/-|_/g, " ")}
-              </h2>
-            )}
-          </div>
-          <ContainerCloser
-            closeFunctions={() => {
-              searchOn(false);
-              closeServeOpContainer(
-                document.getElementById("serve-op-container")
-              );
-            }}
-          />
+        <div>
+          <InnerWrap>
+            <div className={styles.serveOp_container_header}>
+              {search ? (
+                <input
+                  type="text"
+                  placeholder="enter your search query"
+                  onChange={(e) => this.handleSearch(e)}
+                ></input>
+              ) : (
+                <h2 className={styles.serve_op_title}>
+                  {title
+                    .replace(/sports-music-art/g, "Sports, Music & Art")
+                    .replace(/gem-uk/g, "GEM UK")
+                    .replace(/-|_/g, " ")}
+                </h2>
+              )}
+              <ContainerCloser
+                closeFunctions={() => {
+                  searchOn(false);
+                  closeServeOpContainer(
+                    document.getElementById("serve-op-container")
+                  );
+                }}
+              />
+            </div>
+          </InnerWrap>
         </div>
         <div className={styles.serveOp_card_grid_container}>
           <ServeOpCardGrid

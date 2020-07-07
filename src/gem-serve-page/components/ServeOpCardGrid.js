@@ -19,10 +19,11 @@ const useStyles = makeStyles({
   servOpCard: {
     overflow: "hidden",
     height: "100%",
-    width: "345px",
+    width: "325px",
     display: "grid",
     gridTemplateRows: "200px auto 100px",
     borderRadius: 15,
+    margin: "0 25px",
   },
   heroButton: {
     position: "relative",

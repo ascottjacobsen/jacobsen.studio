@@ -1,10 +1,11 @@
 .serve_op_container {
   margin: 0;
+  width: 100%;
 }
 
 .serveOp_container_header {
   top: -1px;
-  padding: 10px 10px 0 10px;
+  padding: 20px 0 0 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;

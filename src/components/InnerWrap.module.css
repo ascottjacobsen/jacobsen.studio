@@ -1,0 +1,10 @@
+.inner_wrap {
+  max-width: 730px;
+  justify-self: center;
+}
+
+@media screen and (max-width: 750px) {
+  .inner_wrap {
+    margin: 0 25px;
+  }
+}

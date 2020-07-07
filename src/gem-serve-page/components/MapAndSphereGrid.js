@@ -50,18 +50,6 @@ class MapAndSphereGrid extends Component {
             </div>
           </div>
         );
-      } else {
-        return (
-          <div className="map-and-sphere-grid">
-            <PulseLoader
-              css={override}
-              size={15}
-              //size={"150px"} this also works
-              color={"#86aa49"}
-              loading={true}
-            />
-          </div>
-        );
       }
     } else {
       return (

@@ -2,19 +2,20 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .headline_box {
   height: 415px;
-  max-width: 500px;
+  /* max-width: 500px; */
   display: grid;
   grid-template-columns: 1fr 1.1fr 1fr;
   grid-template-rows: auto;
   gap: 35px 1px;
   grid-template-areas: "avatar avatar ." "headline headline headline" "headline-text headline-text headline-text" "down-arrow down-arrow down-arrow";
-  margin: 0 25px;
+  /* margin: 0 25px;
   align-self: center;
-  justify-self: center;
+  justify-self: center; */
 }
 
 .avatar {
