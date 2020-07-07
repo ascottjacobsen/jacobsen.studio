@@ -3,20 +3,12 @@ import ServeOpSphere from "./ServeOpSphere";
 import { SvgLoader } from "react-svgmt";
 import { europeMap } from "./EuropeMap.js";
 
-import { css } from "@emotion/core";
-import { PulseLoader } from "react-spinners";
 import { handleMapOrSphereClick } from "./functions";
 
 // import "../css/App.css";
 import "../css/Map.css";
 import "../css/Sphere.css";
 import RegionProxy from "./RegionProxy";
-
-const override = css`
-  display: inline-block;
-  justify-content: center;
-  margin: 0 auto;
-`;
 
 class MapAndSphereGrid extends Component {
   handleMapClick = (e, type) => {
