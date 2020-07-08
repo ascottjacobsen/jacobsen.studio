@@ -2,7 +2,7 @@ export let europeMap = `<svg
 id="europe-map"
 class="serveOp serveOp-map animated-graphic"
 xmlns="http://www.w3.org/2000/svg"
-viewBox="0 0 3133.1741 2615.938"
+viewBox="0 0 2500 2500"
 
 >
 <title></title>
