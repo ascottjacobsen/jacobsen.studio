@@ -32,11 +32,12 @@ const useStyles = makeStyles({
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
     overflow: "hidden",
-    clipPath: "circle(463.5% at 24% -555%)",
+    clipPath: "circle(463.5% at 24% -530%)",
   },
 
   heroImage: {
     width: "100%",
+    height: "100%",
     objectFit: "cover",
     objectPosition: "0 0",
   },
@@ -53,6 +54,10 @@ const useStyles = makeStyles({
 
   serveOpSubTitle: {
     margin: 0,
+  },
+
+  cardDescription: {
+    margin: "10px 0",
   },
 
   actionButtonContainer: {
@@ -77,7 +82,7 @@ const ServeOpCardGrid = ({ opportunities }) => {
     <div className="serveOp serveOp-card-grid">
       {opportunities.map((item) => (
         <Fade bottom key={item.id} className={classes.addCardMargin}>
-          <Card className={classes.servOpCard} elevation={10}>
+          <Card className={classes.servOpCard} elevation={5}>
             <ButtonBase className={classes.heroButton}>
               <img
                 className={classes.heroImage}
@@ -91,7 +96,7 @@ const ServeOpCardGrid = ({ opportunities }) => {
               <h4 className={classes.serveOpSubTitle}>
                 {item.location} &#8226; {item.time}
               </h4>
-              <p className="fade-in">{item.description}</p>
+              <p className={classes.cardDescription}>{item.description}</p>
             </div>
 
             <div className={classes.actionButtonContainer}>

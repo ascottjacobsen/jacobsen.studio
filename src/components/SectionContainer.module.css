@@ -19,7 +19,7 @@
 .section_header {
   grid-area: section_header;
   margin: 0 auto;
-  /* padding: 10px 25px 20px 25px; */
+  padding: 0 0 20px 0;
 }
 
 .section_content {
