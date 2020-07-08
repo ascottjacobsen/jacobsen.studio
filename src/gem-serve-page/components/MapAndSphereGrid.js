@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ServeOpSphere from "./ServeOpSphere";
 import { SvgLoader } from "react-svgmt";
 import { europeMap } from "./EuropeMap.js";
+import styles from "./MapAndSphereGrid.module.css";
 
 import { handleMapOrSphereClick } from "./functions";
 
@@ -45,8 +46,9 @@ class MapAndSphereGrid extends Component {
       }
     } else {
       return (
-        <div className="map-and-sphere-grid">
+        <div className={styles.sphere_container}>
           <ServeOpSphere
+            classForSvg={styles.serveOp_spheres}
             spheresWithOpportunities={spheresWithOpportunities}
             getOpportunities={getOpportunities}
           />

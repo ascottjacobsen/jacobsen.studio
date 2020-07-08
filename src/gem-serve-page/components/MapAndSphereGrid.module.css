@@ -58,3 +58,9 @@
 .map_and_sphere_grid .serveOp-spheres .has_opportunities:hover path {
   opacity: 0.5;
 }
+
+.sphere_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

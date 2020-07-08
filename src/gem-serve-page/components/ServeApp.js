@@ -19,7 +19,7 @@ class App extends Component {
       servingOpportunities: [],
       loadOpportunities: false,
       loadWhereTo: false,
-      loadOpportunitiesCountriesOrSpheres: `countries`,
+      loadOpportunitiesCountriesOrSpheres: `spheres`,
       focusCitiesVisible: false,
       countriesWithOpportunities: {
         byCountry: [],

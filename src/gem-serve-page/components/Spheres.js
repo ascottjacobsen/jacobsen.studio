@@ -1,4 +1,5 @@
-export let spheres = `<svg id="serveOp-spheres" class="serveOp serveOp-spheres animated-graphic" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 339.84 339.84">
+import React from "react";
+export const spheres = `<svg id="serveOp-spheres" class="serveOp serveOp-spheres animated-graphic" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 339.84 339.84">
 <title>gem-spheres</title>
 
   <g id="media" class="sphere-without-opportunities">
@@ -140,4 +141,4 @@ export let spheres = `<svg id="serveOp-spheres" class="serveOp serveOp-spheres a
     
 
 </g>
-</svg>`
+</svg>`;

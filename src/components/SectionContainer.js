@@ -12,8 +12,7 @@ const SectionContainer = ({ children, sectionTitle, sectionDescription }) => {
             <p>{sectionDescription}</p>
           </div>
         </InnerWrap>
-      </div>
-
+      </div>{" "}
       <div className={styles.app_container}>{children}</div>
     </div>
   );
