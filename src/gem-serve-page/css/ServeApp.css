@@ -232,6 +232,7 @@
   justify-content: space-around;
   align-items: center;
   box-shadow: 0px 0px 19px -10px rgba(0, 0, 0, 0.35);
+  position: relative;
 }
 
 .nav-tray button:focus {
@@ -239,7 +240,7 @@
 }
 
 .nav-tray svg {
-  fill: var(--gem-grey);
+  fill: #333;
 }
 
 .nav-tray .active svg {
@@ -361,7 +362,7 @@ button.serveOp.serveOp-close-button:focus {
   transform: scale(1.25);
 }
 
-.serveOp .serveOp-title-row input {
+/* .serveOp .serveOp-title-row input {
   background: none;
   border-top: none;
   border-right: none;
@@ -369,7 +370,7 @@ button.serveOp.serveOp-close-button:focus {
   border-bottom: 1px solid #fff;
   width: 60%;
   color: white;
-}
+} */
 
 .serveOp .serveOp-title-row input::placeholder {
   color: #aaa;
@@ -440,9 +441,12 @@ button.serveOp.serveOp-close-button:focus {
 }
 
 .serveOp.serveOp-no-results {
-  align-self: center;
-  justify-self: center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vw;
 }
 .serveOp-card-grid-buffer {
   width: 100%;

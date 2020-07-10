@@ -215,6 +215,7 @@ class App extends Component {
           }
           focusCitiesVisible={this.state.focusCitiesVisible}
           showFocusCities={this.showFocusCities}
+          search={this.state.search}
           searchOn={this.searchOn}
         />
       </div>

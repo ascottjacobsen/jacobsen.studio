@@ -19,3 +19,20 @@
   overflow: scroll;
   padding: 30px 15px 15px 15px;
 }
+
+.search_input {
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #333;
+  width: 80%;
+  color: #333;
+  padding: 10px 0;
+  margin: 20px 0 0 0;
+  font-size: 1.25rem;
+}
+
+.search_input:focus {
+  outline: blue;
+}

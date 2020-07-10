@@ -9,6 +9,7 @@ class ServeOpContainer extends Component {
     super();
     this.state = {
       searchValue: "",
+      firstSearch: true,
     };
     this.handleSearch = this.handleSearch.bind(this);
   }
@@ -16,11 +17,8 @@ class ServeOpContainer extends Component {
   handleSearch(e) {
     this.setState({
       searchValue: e.target.value,
+      firstSearch: false,
     });
-  }
-
-  componentDidMount() {
-    console.log(`styles: ${styles.what}`);
   }
 
   render() {
@@ -63,8 +61,9 @@ class ServeOpContainer extends Component {
             <div className={styles.serveOp_container_header}>
               {search ? (
                 <input
+                  className={styles.search_input}
                   type="text"
-                  placeholder="enter your search query"
+                  placeholder="search here"
                   onChange={(e) => this.handleSearch(e)}
                 ></input>
               ) : (
@@ -89,6 +88,7 @@ class ServeOpContainer extends Component {
         <div className={styles.serveOp_card_grid_container}>
           <ServeOpCardGrid
             opportunities={search ? filteredOpportunities : opportunities}
+            firstSearch={this.state.firstSearch}
           />
           <div className="serveOp serveOp-card-grid-buffer"></div>
           <div className="serveOp serveOp-card-grid-footer"></div>

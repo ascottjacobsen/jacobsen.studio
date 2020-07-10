@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Zoom from "react-reveal/Zoom";
 
 class CountryTitle extends Component {
   constructor() {
@@ -21,27 +20,25 @@ class CountryTitle extends Component {
 
   render() {
     return (
-      <Zoom duration={200}>
-        <div
-          ref={el => (this.container = el)}
-          position="fixed"
-          z-index="9999"
-          style={{
-            dispay: "flex",
-            alignContent: "flex-end",
-            color: "#fff",
-            background: "#434343",
-            position: "absolute",
-            left: this.state.positionX,
-            top: this.state.positionY,
-            borderRadius: "5px",
-            padding: "10px",
-            // boxShadow: "box-shadow: 0px 0px 63px 1px rgba(0,0,0,0.21)",
-          }}
-        >
-          <h4>{this.props.title.replace("_", " ")}</h4>
-        </div>
-      </Zoom>
+      <div
+        ref={(el) => (this.container = el)}
+        position="fixed"
+        z-index="9999"
+        style={{
+          dispay: "flex",
+          alignContent: "flex-end",
+          color: "#fff",
+          background: "#434343",
+          position: "absolute",
+          left: this.state.positionX,
+          top: this.state.positionY,
+          borderRadius: "5px",
+          padding: "10px",
+          // boxShadow: "box-shadow: 0px 0px 63px 1px rgba(0,0,0,0.21)",
+        }}
+      >
+        <h4>{this.props.title.replace("_", " ")}</h4>
+      </div>
     );
   }
 }

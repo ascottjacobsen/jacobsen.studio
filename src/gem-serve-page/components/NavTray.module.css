@@ -1,0 +1,28 @@
+.nav_tray {
+  position: relative;
+}
+
+.highlight_flex {
+  top: 0;
+  left: 0;
+  /* background: red; */
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.highlight {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  /* background-color: lightblue; */
+  z-index: -1;
+}
+
+.click_pass_through {
+  pointer-events: none;
+}

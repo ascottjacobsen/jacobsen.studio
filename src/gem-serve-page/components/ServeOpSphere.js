@@ -13,13 +13,12 @@ class ServeOpSphere extends Component {
     handleMapOrSphereClick(type, element, this.props.getOpportunities);
   };
   render() {
-    console.log(selectifyArray(this.props.spheresWithOpportunities));
     return (
       <SvgLoader svgXML={spheres}>
         <SvgProxy
           selector={selectifyArray(this.props.spheresWithOpportunities)}
           class="has-opportunities"
-          onClick={e => this.handleSphereClick(e, "sphere")}
+          onClick={(e) => this.handleSphereClick(e, "sphere")}
         />
       </SvgLoader>
     );

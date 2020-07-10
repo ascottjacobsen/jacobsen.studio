@@ -75,9 +75,8 @@ const useStyles = makeStyles({
   },
 });
 
-const ServeOpCardGrid = ({ opportunities }) => {
+const ServeOpCardGrid = ({ opportunities, firstSearch }) => {
   const classes = useStyles();
-  console.log(opportunities);
   return opportunities.length > 0 ? (
     <div className="serveOp serveOp-card-grid">
       {opportunities.map((item) => (
@@ -116,11 +115,22 @@ const ServeOpCardGrid = ({ opportunities }) => {
     </div>
   ) : (
     <div className="serveOp serveOp-no-results">
-      <IconContext.Provider value={{ size: "6.5em", color: "#888" }}>
+      <IconContext.Provider
+        value={{ size: "6.5em", color: "rgba(51, 51, 51, 0.1)" }}
+      >
         <FaSearch />
       </IconContext.Provider>
-      <h5>Your search produced no results.</h5>
-      <p>Try using a differnt term.</p>
+      {(firstSearch && (
+        <div>
+          <h5>Use the field above to search.</h5>
+          <p>You can search by country, city, ministry area, or keyword.</p>
+        </div>
+      )) || (
+        <div>
+          <h5>Your search produced no results.</h5>
+          <p>Try using a differnt term.</p>
+        </div>
+      )}
     </div>
   );
 };
