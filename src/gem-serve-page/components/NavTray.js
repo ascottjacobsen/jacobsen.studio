@@ -11,7 +11,6 @@ function slideIn(pixels) {
       width: 200%;
       height: 50%;
       transform: translate(${pixels}px, 50%);
-      filter: blur(10px)
     }
 
     90% { 
@@ -20,7 +19,6 @@ function slideIn(pixels) {
     }
 
     100% {
-      filter: blur(0px);
       width: 100%;
       height: 100%;
     }
@@ -107,7 +105,7 @@ class NavTray extends Component {
             {activeButton === "countries" && (
               <div ref={this.highlight} className={styles.highlight}>
                 <SpecialDiv
-                  backgroundColor={"lightblue"}
+                  backgroundColor={"#B673B0"}
                   highlightStart={this.state.positionDelta}
                 ></SpecialDiv>
               </div>
@@ -124,7 +122,7 @@ class NavTray extends Component {
               <div ref={this.highlight} className={styles.highlight}>
                 <div ref={this.highlight} className={styles.highlight}>
                   <SpecialDiv
-                    backgroundColor={"lightblue"}
+                    backgroundColor={"#B673B0"}
                     highlightStart={this.state.positionDelta}
                   ></SpecialDiv>
                 </div>
@@ -142,7 +140,7 @@ class NavTray extends Component {
               <div ref={this.highlight} className={styles.highlight}>
                 <div ref={this.highlight} className={styles.highlight}>
                   <SpecialDiv
-                    backgroundColor={"lightblue"}
+                    backgroundColor={"#B673B0"}
                     highlightStart={this.state.positionDelta}
                   ></SpecialDiv>
                 </div>
