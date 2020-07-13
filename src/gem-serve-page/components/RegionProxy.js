@@ -22,7 +22,6 @@ class RegionProxy extends Component {
       hoverTitleName: region,
       hoverTitle: true,
     });
-    // document.getElementById(e.target.id).setAttribute("fill", "#86aa49");
   };
 
   clearHoverTitle = () => {
@@ -33,6 +32,7 @@ class RegionProxy extends Component {
       hoverTitleName: "",
     });
   };
+
   render() {
     let countryAndRegionArray = [];
     this.props.countriesWithOpportunities.map((country) =>

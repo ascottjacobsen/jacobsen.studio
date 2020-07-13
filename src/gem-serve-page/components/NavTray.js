@@ -2,39 +2,7 @@ import React, { Component, createRef } from "react";
 import { FaGlobeEurope, FaSearch, FaDotCircle } from "react-icons/fa";
 import NavButton from "./NavButton";
 import styles from "./NavTray.module.css";
-import styled from "styled-components";
-import { keyframes } from "styled-components";
-
-function slideIn(pixels) {
-  const slide = keyframes`
-    0% {
-      width: 200%;
-      height: 50%;
-      transform: translate(${pixels}px, 50%);
-    }
-
-    90% { 
-      transform: translate(0,0)
-
-    }
-
-    100% {
-      width: 100%;
-      height: 100%;
-    }
-  `;
-  return slide;
-}
-
-const SpecialDiv = styled.div`
-  background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : "red"};
-  height: 100%;
-  width: 100%;
-  border-radius: 100%;
-  position: absolute;
-  animation: ${(props) => slideIn(props.highlightStart)} 0.12s ease;
-`;
+import ActiveButtonHighlight from "./ActiveButtonHighlight";
 
 class NavTray extends Component {
   constructor() {
@@ -81,12 +49,7 @@ class NavTray extends Component {
   }
 
   render() {
-    const {
-      // switchToSpheresOrCountries,
-      loadOpportunitiesCountriesOrSpheres,
-      search,
-    } = this.props;
-
+    const { loadOpportunitiesCountriesOrSpheres, search } = this.props;
     const activeButton = search
       ? "search"
       : loadOpportunitiesCountriesOrSpheres === "countries"
@@ -104,14 +67,13 @@ class NavTray extends Component {
             <FaGlobeEurope className={styles.click_pass_through} />
             {activeButton === "countries" && (
               <div ref={this.highlight} className={styles.highlight}>
-                <SpecialDiv
+                <ActiveButtonHighlight
                   backgroundColor={"#B673B0"}
                   highlightStart={this.state.positionDelta}
-                ></SpecialDiv>
+                />
               </div>
             )}
           </NavButton>
-
           <NavButton
             activeButton={activeButton}
             buttonValue="spheres"
@@ -121,15 +83,14 @@ class NavTray extends Component {
             {activeButton === "spheres" && (
               <div ref={this.highlight} className={styles.highlight}>
                 <div ref={this.highlight} className={styles.highlight}>
-                  <SpecialDiv
+                  <ActiveButtonHighlight
                     backgroundColor={"#B673B0"}
                     highlightStart={this.state.positionDelta}
-                  ></SpecialDiv>
+                  />
                 </div>
               </div>
             )}
           </NavButton>
-
           <NavButton
             activeButton={activeButton}
             buttonValue="search"
@@ -139,10 +100,10 @@ class NavTray extends Component {
             {activeButton === "search" && (
               <div ref={this.highlight} className={styles.highlight}>
                 <div ref={this.highlight} className={styles.highlight}>
-                  <SpecialDiv
+                  <ActiveButtonHighlight
                     backgroundColor={"#B673B0"}
                     highlightStart={this.state.positionDelta}
-                  ></SpecialDiv>
+                  />
                 </div>
               </div>
             )}

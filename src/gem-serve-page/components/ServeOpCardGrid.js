@@ -39,7 +39,7 @@ const useStyles = makeStyles({
     width: "100%",
     height: "100%",
     objectFit: "cover",
-    objectPosition: "0 0",
+    // objectPosition: "0 0",
   },
 
   cardContent: {

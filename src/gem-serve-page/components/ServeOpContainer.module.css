@@ -36,3 +36,7 @@
 .search_input:focus {
   outline: blue;
 }
+
+.serve_op_title {
+  text-transform: capitalize;
+}
